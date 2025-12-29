@@ -1135,14 +1135,15 @@ local RARITY_COLOR = {
 }
 
 local RARITY_GRADIENT = {
-	[1] = "⬜",
-	[2] = "🟩",
-	[3] = "🟦",
-	[4] = "🟪",
-	[5] = "🟧",
-	[6] = "🟥",
-	[7] = "⬛",
+	[1] = "⚪🔺",
+	[2] = "🟢🔺",
+	[3] = "🔵🔺",
+	[4] = "🟣🔺",
+	[5] = "🟠🔺",
+	[6] = "🔴🔺",
+	[7] = "⚫🔺",
 }
+
 
 -------------------------------------------------------
 -- FISH DATABASE (STATIC SOURCE OF TRUTH)
@@ -1262,7 +1263,7 @@ local function BuildFishPayload(player, fishId, weight)
 	local tier = fish.Tier
 
 	return {
-		username = "Mangkuy Fishing Logger",
+		username = "Mangkuy Fishing Log",
 		embeds = {{
 			title = (RARITY_GRADIENT[tier] or "") .. " 🎣 Fish Obtained",
 			color = RARITY_COLOR[tier],
@@ -1397,9 +1398,9 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "Mangkuy", Icon = "https://raw.githubusercontent.com/himangmyid/fishit/refs/heads/main/3.png", Author = "by Himang", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "Mangkuy", Icon = "https://raw.githubusercontent.com/himangmyid/fishit/refs/heads/main/3.png", Author = "by Himang.my.id", Transparent = true })
 Window.Name = GUI_NAMES.Main 
-Window:Tag({ Title = "v.1.0.0", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
+Window:Tag({ Title = "V.Beta", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
 
 local TabPlayer = Window:Tab({ Title = "Player Setting", Icon = "https://cdn4.vectorstock.com/i/1000x1000/09/78/user-neon-label-vector-28270978.jpg" })
@@ -1414,7 +1415,7 @@ local TabSettings = Window:Tab({ Title = "Settings", Icon = "https://media.istoc
 -- [[ TAB PLAYER: UTILITIES ]]
 TabPlayer:Section({ Title = "Hide Name" })
 TabPlayer:Input({
-	Title = "Fake Player Name",
+	Title = "Fake Name",
 	Desc = "Visual only (level safe)",
 	Placeholder = "Input fake name",
 	Callback = function(text)
@@ -1593,7 +1594,7 @@ TabTeleport:Toggle({
     end
 })
 
-TabTeleport:Button({ Title = "Teleport to Megalodon", Desc = "Auto find in '!!! MENU RINGS'", Icon = "skull", Callback = function() TeleportToMegalodon() end })
+TabTeleport:Button({ Title = "Teleport to Megalodon", Desc = "Now Bug Dont Use", Icon = "skull", Callback = function() TeleportToMegalodon() end })
 
 TabTeleport:Section({ Title = "Islands" }) 
 local TP_Dropdown = TabTeleport:Dropdown({ Title = "Select Island", Desc = "Fixed GPS Coordinates", Values = zoneNames, Value = zoneNames[1] or "Select", Callback = function(val) selectedZone = val end })
