@@ -1,9 +1,3 @@
---[[ 
-    FILE: fishing_Mangkuy_v3.1.lua (MOD Auto Favorite v1.0)
-    VERSION: 3.1 (Update: Auto Join Classic Event + Auto Favorite Inventory Based)
-    AUTHOR: Himang
-]]
-
 -- =====================================================
 -- 🧹 BAGIAN 1: CLEANUP SYSTEM
 -- =====================================================
@@ -1831,4 +1825,4 @@ task.delay(1, function()
 end)
 
 task.spawn(StartAntiAFK)
-print("✅ Mangkuy v3.1 Loaded! (With AutoFavorite v4.0) by Himang")
+print("✅ Mangkuy vBeta Loaded! (With AutoFavorite v4.0) by Himang")
