@@ -1399,9 +1399,9 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "Mangkuy", Icon = "https://raw.githubusercontent.com/himangmyid/tesfish/refs/heads/main/3.png", Author = "by Himang.my.id", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "Mangkuy", Icon = "https://raw.githubusercontent.com/himangmyid/fishit/refs/heads/main/3.png", Author = "by Himang.my.id", Transparent = true })
 Window.Name = GUI_NAMES.Main 
-Window:Tag({ Title = "v.Beta", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0, Icon = "https://raw.githubusercontent.com/himangmyid/tesfish/refs/heads/main/3.png" })
+Window:Tag({ Title = "v.Beta", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
 
 local TabPlayer = Window:Tab({ Title = "Player Setting", Icon = "https://cdn4.vectorstock.com/i/1000x1000/09/78/user-neon-label-vector-28270978.jpg" })
